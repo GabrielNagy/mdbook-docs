@@ -1,0 +1,6 @@
+[book]
+authors = ["Gabriel Nagy"]
+language = "en"
+multilingual = false
+src = "src"
+title = "mdBook docs"
