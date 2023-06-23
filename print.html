@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="nested/index.html"><strong aria-hidden="true">2.</strong> Nested example</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nested/sub-chapter.html"><strong aria-hidden="true">2.1.</strong> Sub-chapter</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,7 +145,34 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Welcome to the mdBook docs site.</p>
+<p>This is a Ruby snippet:</p>
+<pre><code class="language-ruby">module Enumerable
+  def uniq
+    result = []
+    uniq_map = {}
+    if block_given?
+      each do |value|
+        key = yield value
+        next if uniq_map.has_key?(key)
+        uniq_map[key] = true
+        result &lt;&lt; value
+      end
+    else
+      each do |value|
+        next if uniq_map.has_key?(value)
+        uniq_map[value] = true
+        result &lt;&lt; value
+      end
+    end
+    result
+  end
+end
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nested-example"><a class="header" href="#nested-example">Nested example</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sub-chapter"><a class="header" href="#sub-chapter">Sub-chapter</a></h1>
 
                     </main>
 
